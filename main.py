@@ -1,14 +1,15 @@
 #!/usr/bin/python3.10
 """
 this module should open the Postman Collection json and parse it and return the cURL
+Pass the collection path to main function abd it returns a list of curls
 """
 import json
 
 
-def postman_parser():
+def postman_parser(collection):
     output = {}
     curls = []
-    with open("data/IBS-NG Copy.postman_collection.json", "rb") as file:
+    with open(f"{collection}", "rb") as file:
         f = json.load(file)
         items = f.get("item")
         variables = f.get("variable")
@@ -34,8 +35,5 @@ def postman_parser():
                 raw = body.get('raw', '') if body else '{}'
                 c = c + f"-d \"{raw}\" "
             curls.append(c)
-            print(c)
+            return curls
 
-
-if __name__ == "__main__":
-    postman_parser()
