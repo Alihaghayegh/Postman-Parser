@@ -1,7 +1,7 @@
 #!/usr/bin/python3.10
 """
 this module should open the Postman Collection json and parse it and return the cURL
-Pass the collection path to main function abd it returns a list of curls
+Pass the collection path to main function, and it returns a list of curls
 """
 import json
 
@@ -35,5 +35,4 @@ def postman_parser(collection):
                 raw = body.get('raw', '') if body else '{}'
                 c = c + f"-d \"{raw}\" "
             curls.append(c)
-            return curls
-
+        return curls
