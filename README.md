@@ -6,7 +6,7 @@ Pass the collection path to main function, and it returns a list of curls.
 ```python
 postman = Postman_parser()
 ```
-* Postman_parser class has method called postman_to_curl .
+* Postman_Parser class has method called postman_to_curl .
 ```python
 curls = postman.postman_to_curl("your postman collection address")
 ```
