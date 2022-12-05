@@ -2,9 +2,9 @@
 - This module opens the Postman Collection json and parse it and return the cURL
 Pass the collection path to main function, and it returns a list of curls.
 ***********************************************************************************
-* At first create an instance of Postman_parser class :
+* At first create an instance of Postman_Parser class :
 ```python
-postman = Postman_parser()
+postman = Postman_Parser()
 ```
 * Postman_Parser class has method called postman_to_curl .
 ```python
